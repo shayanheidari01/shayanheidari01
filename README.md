@@ -1,5 +1,4 @@
 
-<img src="https://sun9-30.userapi.com/impf/UfnXajjrWO1K1aqSMvAJK92S-tOLm3pnqgt2jw/Mtiet-ig8VE.jpg?size=795x200&quality=95&crop=0,0,1590,400&sign=342f685e539545ad1db87ba9731e2e24&type=cover_group" align="center">
 
 ## I have mastered: 👨‍💻	
 
