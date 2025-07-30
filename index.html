@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>شایان حیدری | توسعه‌دهنده نرم‌افزار</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pOllg+2A1e6lB0t0X5txaPY0RBIvG0x6YQ7HbEhWZ4rQWnIJUeKcQ+bgRZhjzYk93/l0nLetP1WnV/vK+I2ebg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * { box-sizing: border-box; }
     body {
@@ -15,10 +15,7 @@
       color: #e1e6f0;
       transition: background 0.5s ease, color 0.5s ease;
     }
-    body.light {
-      background: #ffffff;
-      color: #333333;
-    }
+    body.light { background: #f7fafa; color: #111; }
     .container {
       max-width: 960px;
       margin: 50px auto;
@@ -30,163 +27,142 @@
       transform: translateY(40px);
       opacity: 0;
       transition: all 1s ease, background 0.5s ease;
+      position: relative;
     }
-    body.light .container {
-      background: rgba(0, 0, 0, 0.04);
-      box-shadow: 0 22px 50px rgba(0,0,0,0.1);
-    }
+    body.light .container { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
     .show { transform: translateY(0); opacity: 1; }
-    header {
-      text-align: center;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      transition: border-color 0.5s ease;
+    /* کنترل‌ها */
+    .top-controls {
+      position: absolute;
+      top: 20px; left: 20px;
+      display: flex; gap: 10px;
+      z-index: 10;
     }
-    body.light header {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    .top-controls button {
+      background: rgba(255,255,255,0.12);
+      border: none; padding: 8px;
+      border-radius: 50%; cursor: pointer;
+      color: #00ffc8; font-size: 18px;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
+    .top-controls button:hover { background: rgba(0,255,200,0.2); transform: scale(1.1); }
+    body.light .top-controls button { background: rgba(0,150,136,0.12); color: #00695c; }
+    body.light .top-controls button:hover { background: rgba(0,150,136,0.2); }
+    header { text-align: center; padding-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+    body.light header { border-bottom: 1px solid rgba(0,0,0,0.1); }
     header img {
-      width: 150px; height: 150px;
-      border-radius: 50%; border: 3px solid rgba(255, 255, 255, 0.5);
-      object-fit: cover;
-      box-shadow: 0 0 28px rgba(0, 0, 0, 0.45);
+      width: 150px; height: 150px; border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.5);
+      object-fit: cover; box-shadow: 0 0 28px rgba(0, 0, 0, 0.45);
       animation: float 4s ease-in-out infinite;
     }
     @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);} }
     h1 { font-size: 32px; margin: 18px 0 6px; font-weight:700; }
-    h2 { font-size: 18px; font-weight:400; color: #99e9d9; margin:0; min-height:28px; }
-    body.light h2 { color: #00796b; }
+    h2 { font-size: 18px; font-weight:400; color: #99e9d9; margin:0; }
+    body.light h2 { color: #009688; }
     section { margin:45px 0; opacity:0; transform:translateY(50px); transition:all 0.85s ease; }
     section.show { opacity:1; transform:translateY(0); }
-    section h3 {
-      font-size:22px; color:#00ffc8;
-      border-bottom:3px solid #00ffc8; padding-bottom:8px; margin-bottom:25px;
-    }
+    section h3 { font-size:22px; color:#00ffc8; border-bottom:3px solid #00ffc8; padding-bottom:8px; margin-bottom:25px; }
+    body.light section h3 { color: #00bfa5; border-color: #00bfa5; }
     .skills { display:flex; flex-wrap:wrap; gap:12px; }
     .skill {
-      background: rgba(255,255,255,0.12);
-      padding:12px 20px; border-radius:25px;
-      font-size:15px; font-weight:600;
+      background: rgba(255,255,255,0.12); padding:12px 20px;
+      border-radius:25px; font-size:15px; font-weight:600;
       border:1.5px solid rgba(255,255,255,0.18);
       display:flex; align-items:center; gap:8px;
       transition:all 0.4s ease;
     }
     .skill i { color:#00ffc8; }
-    .skill:hover {
-      background:#00ffc8; color:#1a1a1a;
-      transform:scale(1.18) rotate(-2deg);
-      box-shadow:0 10px 30px rgba(0,255,200,0.45);
-    }
+    .skill:hover { background:#00ffc8; color:#1a1a1a; transform:scale(1.18) rotate(-2deg); box-shadow:0 10px 30px rgba(0,255,200,0.45); }
+    body.light .skill { background: #fff; border: 1px solid rgba(0,0,0,0.06); }
+    body.light .skill i { color: #00bfa5; }
+    body.light .skill:hover { background: #00bfa5; color: #fff; }
     .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:26px; }
     .card {
-      background:rgba(255,255,255,0.07);
-      padding:26px 22px; border-radius:20px;
-      border:1.5px solid rgba(255,255,255,0.12);
-      transition:all 0.45s ease; cursor:pointer; display:flex;
-      flex-direction:column; gap:12px;
+      background:rgba(255,255,255,0.07); padding:26px 22px;
+      border-radius:20px; border:1.5px solid rgba(255,255,255,0.12);
+      transition:all 0.45s ease; cursor:pointer;
+      display:flex; flex-direction:column; gap:12px;
     }
-    .card:hover {
-      transform:translateY(-8px);
-      background:rgba(0,255,200,0.15);
-      border-color:#00ffc8;
-      box-shadow:0 14px 45px rgba(0,255,200,0.55);
-    }
+    .card:hover { transform:translateY(-8px); background:rgba(0,255,200,0.15); border-color:#00ffc8; box-shadow:0 14px 45px rgba(0,255,200,0.55); }
+    body.light .card { background: #fff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
+    body.light .card:hover { background: #e0f8f5; border-color: #00bfa5; box-shadow: 0 10px 25px rgba(0,191,165,0.25); }
     .card h4 { margin:0; color:#00ffc8; font-weight:700; }
-    footer {
-      text-align:center; font-size:13px; color:rgba(255,255,255,0.6);
-      border-top:1px solid rgba(255,255,255,0.15);
-      padding-top:14px; margin-top:50px;
-    }
-    body.light footer { border-top:1px solid rgba(0,0,0,0.15); color:#444; }
-    .controls { display:flex; justify-content:center; gap:18px; margin-bottom:28px; }
-    button {
-      padding:12px 22px; border-radius:30px; border:none;
-      font-weight:600; font-size:15px; letter-spacing:0.06em;
-      cursor:pointer; transition:all 0.4s ease;
-      background:linear-gradient(135deg,#00ffc8,#00b38a);
-      color:#111; box-shadow:0 2px 7px rgba(0,255,200,0.45),inset 0 -2px 7px rgba(0,255,200,0.3);
-    }
-    button:hover {
-      background:linear-gradient(135deg,#00e0b8,#009a72);
-      box-shadow:0 8px 18px rgba(0,255,200,0.65),inset 0 -2px 9px rgba(0,255,200,0.45);
-      color:#fff; transform:scale(1.08);
-    }
-    body.light button {
-      background:linear-gradient(135deg,#009688,#00675b);
-      color:#e0f1ed;
-      box-shadow:0 1px 6px rgba(0,150,136,0.6),inset 0 -2px 5px rgba(0,150,136,0.4);
-    }
-    body.light button:hover {
-      background:linear-gradient(135deg,#00675b,#003f38);
-      box-shadow:0 6px 15px rgba(0,150,136,0.8),inset 0 -2px 7px rgba(0,150,136,0.6);
-      color:#cdf7e7;
-    }
-    .typewriter { font-weight:700; font-size:18px; min-height:28px; letter-spacing:0.06em; }
+    body.light .card h4 { color: #00bfa5; }
+    footer { text-align:center; font-size:13px; color:rgba(255,255,255,0.6); border-top:1px solid rgba(255,255,255,0.15); padding-top:14px; margin-top:50px; }
+    body.light footer { border-top:1px solid rgba(0,0,0,0.08); color:#555; }
     ul { padding-left:1.2em; }
     ul li { margin-bottom:8px; display:flex; align-items:center; gap:8px; }
     ul li i { color:#00ffc8; }
+    body.light ul li i { color:#00bfa5; }
     a { color:#00ffc8; text-decoration:none; transition:color 0.3s ease; }
     a:hover { color:#b2fff0; }
-    @media(max-width:620px) {
-      .skills { justify-content:center; }
-      .cards { grid-template-columns:1fr; }
-      button { font-size:14px; padding:10px 18px; }
-      .container { margin:30px 20px; padding:25px 20px; }
-    }
+    body.light a { color: #00bfa5; }
+    body.light a:hover { color: #009688; }
+    @media(max-width:620px) { .skills { justify-content:center; } .cards { grid-template-columns:1fr; } .container { margin:30px 20px; padding:25px 20px; } }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="top-controls">
+      <button id="langBtn" title="تغییر زبان"><i class="fas fa-language"></i></button>
+      <button id="themeBtn" title="تغییر حالت تم"><i class="fas fa-moon"></i></button>
+    </div>
 
-  <div class="controls" role="region" aria-label="تنظیمات زبان و تم">
-    <button id="langBtn" aria-pressed="false" aria-label="تغییر زبان">🇮🇷 فارسی</button>
-    <button id="themeBtn" aria-pressed="false" aria-label="تغییر حالت شب و روز">🌙</button>
-  </div>
-
-  <div class="container" role="main">
     <header>
       <img src="https://avatars.githubusercontent.com/u/88770699?v=4" alt="Shayan Heidari" />
       <h1 data-fa="شایان حیدری" data-en="Shayan Heidari" data-ar="شايان حيدري">شایان حیدری</h1>
       <h2 class="typewriter"></h2>
-      <p data-fa="من شایان هستم، عاشق خلق ابزارهای هوشمند و راهکارهای نرم‌افزاری که زندگی را ساده‌تر و کارآمدتر می‌کنند."
-         data-en="I am Shayan, passionate about creating intelligent tools and software solutions that make life easier and more efficient."
-         data-ar="أنا شايان، شغوف بإنشاء أدوات ذكية وحلول برمجية تجعل الحياة أسهل وأكثر كفاءة.">
-        من شایان هستم، عاشق خلق ابزارهای هوشمند و راهکارهای نرم‌افزاری که زندگی را ساده‌تر و کارآمدتر می‌کنند.
+      <p data-fa="توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی. عاشق خلق ابزارهای هوشمند و راهکارهای نرم‌افزاری که زندگی را ساده‌تر و کارآمدتر می‌کنند."
+         data-en="Software developer, backend engineer, and AI enthusiast. Passionate about creating intelligent tools and solutions that simplify and enhance life."
+         data-ar="مطور برمجيات، مهندس خلفية، ومهتم بالذكاء الاصطناعي. شغوف بإنشاء أدوات وحلول ذكية تجعل الحياة أسهل وأكثر فعالية.">
+        توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی. عاشق خلق ابزارهای هوشمند و راهکارهای نرم‌افزاری که زندگی را ساده‌تر و کارآمدتر می‌کنند.
       </p>
     </header>
 
     <section>
       <h3 data-fa="مهارت‌ها" data-en="Skills" data-ar="المهارات">مهارت‌ها</h3>
-      <div class="skills" role="list">
-        <div class="skill" role="listitem"><i class="fab fa-python"></i>Python</div>
-        <div class="skill" role="listitem"><i class="fab fa-php"></i>PHP</div>
-        <div class="skill" role="listitem"><i class="fas fa-code-branch"></i>C++</div>
-        <div class="skill" role="listitem"><i class="fas fa-code"></i>C</div>
-        <div class="skill" role="listitem"><i class="fab fa-go"></i>Go</div>
-        <div class="skill" role="listitem"><i class="fas fa-mobile-alt"></i>Dart</div>
-        <div class="skill" role="listitem"><i class="fas fa-bolt"></i>Rust</div>
-        <div class="skill" role="listitem"><i class="fab fa-js-square"></i>JavaScript</div>
-        <div class="skill" role="listitem"><i class="fab fa-java"></i>Java</div>
-        <div class="skill" role="listitem"><i class="fas fa-database"></i>SQL</div>
-        <div class="skill" role="listitem"><i class="fas fa-mobile"></i>Flutter</div>
+      <p data-fa="تسلط بر زبان‌ها و تکنولوژی‌های متنوع برنامه‌نویسی برای توسعه سیستم‌های مقیاس‌پذیر، امن و بهینه."
+         data-en="Proficient in diverse programming languages and technologies to build scalable, secure, and efficient systems."
+         data-ar="إتقان لغات وتقنيات برمجية متنوعة لبناء أنظمة قابلة للتوسع وآمنة وفعالة.">
+        تسلط بر زبان‌ها و تکنولوژی‌های متنوع برنامه‌نویسی برای توسعه سیستم‌های مقیاس‌پذیر، امن و بهینه.
+      </p>
+      <div class="skills">
+        <div class="skill"><i class="fab fa-python"></i>Python</div>
+        <div class="skill"><i class="fab fa-php"></i>PHP</div>
+        <div class="skill"><i class="fas fa-code-branch"></i>C++</div>
+        <div class="skill"><i class="fas fa-code"></i>C</div>
+        <div class="skill"><i class="fab fa-go"></i>Go</div>
+        <div class="skill"><i class="fas fa-mobile-alt"></i>Dart</div>
+        <div class="skill"><i class="fas fa-bolt"></i>Rust</div>
+        <div class="skill"><i class="fab fa-js-square"></i>JavaScript</div>
+        <div class="skill"><i class="fab fa-java"></i>Java</div>
+        <div class="skill"><i class="fas fa-database"></i>SQL</div>
+        <div class="skill"><i class="fas fa-mobile"></i>Flutter</div>
       </div>
     </section>
 
     <section>
       <h3 data-fa="پروژه‌های برجسته" data-en="Highlighted Projects" data-ar="المشاريع المميزة">پروژه‌های برجسته</h3>
+      <p data-fa="نمونه‌ای از پروژه‌هایی که با تمرکز بر نوآوری، کارایی، و تجربه کاربری برتر توسعه داده شده‌اند."
+         data-en="A selection of projects developed with a focus on innovation, performance, and exceptional user experience."
+         data-ar="مجموعة من المشاريع التي تم تطويرها مع التركيز على الابتكار والأداء وتجربة المستخدم المميزة.">
+        نمونه‌ای از پروژه‌هایی که با تمرکز بر نوآوری، کارایی، و تجربه کاربری برتر توسعه داده شده‌اند.
+      </p>
       <div class="cards">
-        <div class="card" tabindex="0">
-          <h4><i class="fas fa-cubes"></i> Simorgh CMS</h4>
-          <p data-fa="یک CMS پیشرفته با پایتون، طراحی شده برای مدیریت محتوا با انعطاف بالا، سرعت زیاد و امنیت فوق‌العاده."
-             data-en="An advanced Python-based CMS designed for flexibility, speed, and top security."
-             data-ar="نظام إدارة محتوى متقدم بلغة بايثون، مصمم للمرونة والسرعة والأمان العالي.">
-            یک CMS پیشرفته با پایتون، طراحی شده برای مدیریت محتوا با انعطاف بالا، سرعت زیاد و امنیت فوق‌العاده.
+        <div class="card">
+          <h4>Simorgh CMS</h4>
+          <p data-fa="یک سیستم مدیریت محتوای پیشرفته با پایتون، طراحی‌شده برای مقیاس‌پذیری بالا، امنیت پیشرفته و سفارشی‌سازی کامل."
+             data-en="An advanced Python-based CMS built for high scalability, enhanced security, and full customization."
+             data-ar="نظام إدارة محتوى متقدم مبني على بايثون، مصمم للتوسع العالي والأمان المتقدم والتخصيص الكامل.">
+            یک سیستم مدیریت محتوای پیشرفته با پایتون، طراحی‌شده برای مقیاس‌پذیری بالا، امنیت پیشرفته و سفارشی‌سازی کامل.
           </p>
         </div>
-        <div class="card" tabindex="0">
-          <h4><i class="fas fa-database"></i> Ormax ORM</h4>
+        <div class="card">
+          <h4>Ormax ORM</h4>
           <p data-fa="یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند."
-             data-en="A lightweight, fast, async Python ORM that simplifies database management and development."
-             data-ar="ORM خفيف وسريع ومتزامن للبايثون يبسط إدارة وتطوير قواعد البيانات.">
+             data-en="A lightweight, fast, async Python ORM that simplifies and enhances database development."
+             data-ar="ORM خفيف وسريع ومتزامن للبايثون يبسط ويعزز تطوير قواعد البيانات.">
             یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند.
           </p>
         </div>
@@ -194,21 +170,10 @@
     </section>
 
     <section>
-      <h3 data-fa="زبان‌ها" data-en="Languages" data-ar="اللغات">زبان‌ها</h3>
+      <h3 data-fa="اطلاعات تماس" data-en="Contact" data-ar="التواصل">اطلاعات تماس</h3>
       <ul>
-        <li><i class="fas fa-language"></i>🇮🇷 فارسی</li>
-        <li><i class="fas fa-language"></i>🇦🇫 فارسی-دری</li>
-        <li><i class="fas fa-language"></i>🇬🇧 English</li>
-        <li><i class="fas fa-language"></i>🇸🇦 العربية</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3 data-fa="اطلاعات تماس" data-en="Contact Information" data-ar="معلومات الاتصال">اطلاعات تماس</h3>
-      <ul>
-        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:Shayanheidari01@gmail.com">Shayanheidari01@gmail.com</a></li>
-        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/shayanheidari01" target="_blank">github.com/shayanheidari01</a></li>
-        <li><i class="fas fa-globe"></i> Website: <a href="https://Shayan-heidari.ir" target="_blank">Shayan-heidari.ir</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:Shayanheidari01@gmail.com">Shayanheidari01@gmail.com</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/shayanheidari01" target="_blank">github.com/shayanheidari01</a></li>
       </ul>
     </section>
 
@@ -227,48 +192,25 @@
     const langBtn = document.getElementById('langBtn');
     const themeBtn = document.getElementById('themeBtn');
 
-    // تغییر زبان
     langBtn.addEventListener('click', () => {
       currentLang = (currentLang + 1) % langs.length;
       const lang = langs[currentLang];
       document.querySelectorAll('[data-fa]').forEach(el => el.textContent = el.dataset[lang]);
       document.documentElement.lang = lang;
       document.documentElement.dir = (lang === 'ar' || lang === 'fa') ? 'rtl' : 'ltr';
-      langBtn.textContent = lang === 'fa' ? '🇮🇷 فارسی' : lang === 'en' ? '🇬🇧 English' : '🇸🇦 العربية';
-      startTypewriter(lang);
     });
 
-    // تغییر تم
     themeBtn.addEventListener('click', function() {
       document.body.classList.toggle('light');
-      this.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
+      this.innerHTML = document.body.classList.contains('light')
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
     });
 
-    // انیمیشن اسکرول
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.container, section').forEach(el => observer.observe(el));
-
-    // تایپ انیمیشن
-    function startTypewriter(lang = "fa") {
-      const texts = {
-        fa: ["توسعه‌دهنده نرم‌افزار","مهندس‌بک‌اند","علاقه‌مند به هوش مصنوعی"],
-        en: ["Software Developer","Backend Engineer","AI Enthusiast"],
-        ar: ["مطور برمجيات","مهندس Backend","مهتم بالذكاء الاصطناعي"]
-      };
-      const el = document.querySelector(".typewriter");
-      let i = 0, j = 0, currentText = "", isDeleting = false;
-      (function type() {
-        const fullText = texts[lang][i];
-        currentText = isDeleting ? fullText.substring(0, j--) : fullText.substring(0, j++);
-        el.textContent = currentText;
-        if (!isDeleting && j === fullText.length) { isDeleting = true; setTimeout(type, 1200); return; }
-        if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % texts[lang].length; }
-        setTimeout(type, isDeleting ? 50 : 100);
-      })();
-    }
-    startTypewriter();
   </script>
 </body>
 </html>
