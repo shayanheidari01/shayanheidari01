@@ -4,36 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO Meta Tags -->
   <title>شایان حیدری | توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی</title>
-  <meta name="description" content="شایان حیدری، توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی. متخصص در پایتون، PHP، Rust، Dart و توسعه سیستم‌های مقیاس‌پذیر و امن." />
-  <meta name="keywords" content="شایان حیدری, توسعه دهنده نرم افزار, برنامه نویس, Python, PHP, Rust, Dart, Flutter, هوش مصنوعی, بک اند, Backend Developer, AI" />
+  <meta name="description" content="شایان حیدری، توسعه‌دهنده نرم‌افزار و مهندس بک‌اند متخصص در پایتون، PHP، Rust، Dart و Flutter. علاقه‌مند به هوش مصنوعی و ساخت راهکارهای نرم‌افزاری هوشمند و مقیاس‌پذیر. نمونه کارها، مهارت‌ها و پروژه‌های شایان حیدری را در این صفحه ببینید." />
+  <meta name="keywords" content="شایان حیدری, توسعه دهنده نرم افزار, برنامه نویس, Python, PHP, Rust, Dart, Flutter, هوش مصنوعی, بک اند, Backend Developer, AI Developer" />
   <meta name="author" content="Shayan Heidari" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1b2132" />
-  <link rel="canonical" href="https://shayan-heidari.ir/" />
+  <link rel="canonical" href="https://your-domain.com/" />
 
-  <!-- Alternate Language Versions -->
-  <link rel="alternate" hreflang="fa" href="https://shayan-heidari.ir/fa/" />
-  <link rel="alternate" hreflang="en" href="https://shayan-heidari.ir/en/" />
-  <link rel="alternate" hreflang="ar" href="https://shayan-heidari.ir/ar/" />
+  <link rel="alternate" hreflang="fa" href="https://your-domain.com/fa/" />
+  <link rel="alternate" hreflang="en" href="https://your-domain.com/en/" />
+  <link rel="alternate" hreflang="ar" href="https://your-domain.com/ar/" />
 
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Shayan Heidari",
     "jobTitle": "Software Developer & Backend Engineer",
-    "url": "https://shayan-heidari.ir/",
+    "url": "https://your-domain.com/",
     "image": "https://avatars.githubusercontent.com/u/119259115?v=4",
     "sameAs": [
       "https://github.com/shayanheidari01",
-      "mailto:shayanheidari01@gmail.com"
+      "mailto:Shayanheidari01@gmail.com"
     ],
     "description": "شایان حیدری، توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی."
   }
@@ -64,6 +60,8 @@
     }
     body.light .container { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
     .show { transform: translateY(0); opacity: 1; }
+
+    /* کنترل‌ها */
     .top-controls {
       position: absolute;
       top: 20px; left: 20px;
@@ -80,135 +78,234 @@
     .top-controls button:hover { background: rgba(0,255,200,0.2); transform: scale(1.1); }
     body.light .top-controls button { background: rgba(0,150,136,0.12); color: #00695c; }
     body.light .top-controls button:hover { background: rgba(0,150,136,0.2); }
-    header { text-align: center; padding-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+
+    header {
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
     body.light header { border-bottom: 1px solid rgba(0,0,0,0.1); }
+
     header img {
-      width: 150px; height: 150px; border-radius: 50%;
+      width: 150px; height: 150px;
+      border-radius: 50%;
       border: 3px solid rgba(255, 255, 255, 0.5);
-      object-fit: cover; box-shadow: 0 0 28px rgba(0, 0, 0, 0.45);
+      object-fit: cover;
+      box-shadow: 0 0 28px rgba(0, 0, 0, 0.45);
       animation: float 4s ease-in-out infinite;
     }
     @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);} }
+
     h1 { font-size: 32px; margin: 18px 0 6px; font-weight:700; }
     h2 { font-size: 18px; font-weight:400; color: #99e9d9; margin:0; }
     body.light h2 { color: #009688; }
-    section { margin:45px 0; opacity:0; transform:translateY(50px); transition:all 0.85s ease; }
+
+    section {
+      margin:45px 0;
+      opacity:0;
+      transform:translateY(50px);
+      transition:all 0.85s ease;
+    }
     section.show { opacity:1; transform:translateY(0); }
-    section h3 { font-size:22px; color:#00ffc8; border-bottom:3px solid #00ffc8; padding-bottom:8px; margin-bottom:25px; }
+
+    section h3 {
+      font-size:22px;
+      color:#00ffc8;
+      border-bottom:3px solid #00ffc8;
+      padding-bottom:8px;
+      margin-bottom:25px;
+    }
     body.light section h3 { color: #00bfa5; border-color: #00bfa5; }
-    .skills { display:flex; flex-wrap:wrap; gap:12px; }
+
+    .skills {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+    }
     .skill {
-      background: rgba(255,255,255,0.12); padding:12px 20px;
-      border-radius:25px; font-size:15px; font-weight:600;
+      background: rgba(255,255,255,0.12);
+      padding:12px 20px;
+      border-radius:25px;
+      font-size:15px;
+      font-weight:600;
       border:1.5px solid rgba(255,255,255,0.18);
-      display:flex; align-items:center; gap:8px;
+      display:flex;
+      align-items:center;
+      gap:8px;
       transition:all 0.4s ease;
     }
     .skill i { color:#00ffc8; }
-    .skill:hover { background:#00ffc8; color:#1a1a1a; transform:scale(1.18) rotate(-2deg); box-shadow:0 10px 30px rgba(0,255,200,0.45); }
-    body.light .skill { background: #fff; border: 1px solid rgba(0,0,0,0.06); }
+    .skill:hover {
+      background:#00ffc8;
+      color:#1a1a1a;
+      transform:scale(1.18) rotate(-2deg);
+      box-shadow:0 10px 30px rgba(0,255,200,0.45);
+    }
+    body.light .skill {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
     body.light .skill i { color: #00bfa5; }
     body.light .skill:hover { background: #00bfa5; color: #fff; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:26px; }
-    .card {
-      background:rgba(255,255,255,0.07); padding:26px 22px;
-      border-radius:20px; border:1.5px solid rgba(255,255,255,0.12);
-      transition:all 0.45s ease; cursor:pointer;
-      display:flex; flex-direction:column; gap:12px;
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:26px;
     }
-    .card:hover { transform:translateY(-8px); background:rgba(0,255,200,0.15); border-color:#00ffc8; box-shadow:0 14px 45px rgba(0,255,200,0.55); }
-    body.light .card { background: #fff; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
-    body.light .card:hover { background: #e0f8f5; border-color: #00bfa5; box-shadow: 0 10px 25px rgba(0,191,165,0.25); }
+    .card {
+      background:rgba(255,255,255,0.07);
+      padding:26px 22px;
+      border-radius:20px;
+      border:1.5px solid rgba(255,255,255,0.12);
+      transition:all 0.45s ease;
+      cursor:pointer;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .card:hover {
+      transform:translateY(-8px);
+      background:rgba(0,255,200,0.15);
+      border-color:#00ffc8;
+      box-shadow:0 14px 45px rgba(0,255,200,0.55);
+    }
+    body.light .card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+    body.light .card:hover {
+      background: #e0f8f5;
+      border-color: #00bfa5;
+      box-shadow: 0 10px 25px rgba(0,191,165,0.25);
+    }
     .card h4 { margin:0; color:#00ffc8; font-weight:700; }
     body.light .card h4 { color: #00bfa5; }
-    footer { text-align:center; font-size:13px; color:rgba(255,255,255,0.6); border-top:1px solid rgba(255,255,255,0.15); padding-top:14px; margin-top:50px; }
-    body.light footer { border-top:1px solid rgba(0,0,0,0.08); color:#555; }
+
+    footer {
+      text-align:center;
+      font-size:13px;
+      color:rgba(255,255,255,0.6);
+      border-top:1px solid rgba(255,255,255,0.15);
+      padding-top:14px;
+      margin-top:50px;
+    }
+    body.light footer {
+      border-top:1px solid rgba(0,0,0,0.08);
+      color:#555;
+    }
+
     ul { padding-left:1.2em; }
-    ul li { margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+    ul li {
+      margin-bottom:8px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
     ul li i { color:#00ffc8; }
     body.light ul li i { color:#00bfa5; }
-    a { color:#00ffc8; text-decoration:none; transition:color 0.3s ease; }
+
+    a {
+      color:#00ffc8;
+      text-decoration:none;
+      transition:color 0.3s ease;
+    }
     a:hover { color:#b2fff0; }
     body.light a { color: #00bfa5; }
     body.light a:hover { color: #009688; }
-    @media(max-width:620px) { .skills { justify-content:center; } .cards { grid-template-columns:1fr; } .container { margin:30px 20px; padding:25px 20px; } }
+
+    @media(max-width:620px) {
+      .skills { justify-content:center; }
+      .cards { grid-template-columns:1fr; }
+      .container { margin:30px 20px; padding:25px 20px; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="top-controls">
-      <button id="langBtn" title="تغییر زبان"><i class="fas fa-language"></i></button>
-      <button id="themeBtn" title="تغییر حالت تم"><i class="fas fa-moon"></i></button>
+    <div class="top-controls" role="navigation" aria-label="Language and theme controls">
+      <button id="langBtn" title="تغییر زبان" aria-label="تغییر زبان"><i class="fas fa-language"></i></button>
+      <button id="themeBtn" title="تغییر حالت تم" aria-label="تغییر حالت تم"><i class="fas fa-moon"></i></button>
     </div>
 
     <header>
-      <img loading="lazy" src="https://avatars.githubusercontent.com/u/119259115?v=4" alt="Shayan Heidari - Software Developer" />
+      <img loading="lazy" src="https://avatars.githubusercontent.com/u/119259115?v=4" alt="تصویر پروفایل شایان حیدری" />
       <h1 data-fa="شایان حیدری" data-en="Shayan Heidari" data-ar="شايان حيدري">شایان حیدری</h1>
-      <h2 class="typewriter"></h2>
-      <p data-fa="توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی. عاشق خلق ابزارهای هوشمند و راهکارهای نرم‌افزاری که زندگی را ساده‌تر و کارآمدتر می‌کنند."
-         data-en="Software developer, backend engineer, and AI enthusiast. Passionate about creating intelligent tools and solutions that simplify and enhance life."
-         data-ar="مطور برمجيات، مهندس خلفية، ومهتم بالذكاء الاصطناعي. شغوف بإنشاء أدوات وحلول ذكية تجعل الحياة أسهل وأكثر فعالية.">
-        توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی. عاشق خلق ابزارهای هوشمند و راهکارهای نرم‌افزاری که زندگی را ساده‌تر و کارآمدتر می‌کنند.
+      <h2 class="typewriter" data-fa="توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی"
+          data-en="Software Developer, Backend Engineer & AI Specialist"
+          data-ar="مطور برمجيات، مهندس خلفية و متخصص الذكاء الاصطناعي">توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی</h2>
+      <p data-fa="من شایان حیدری هستم، توسعه‌دهنده نرم‌افزار با تخصص در ساخت سیستم‌های مقیاس‌پذیر، امن و بهینه. علاقه‌مند به هوش مصنوعی و خلق ابزارهای هوشمند که زندگی را ساده‌تر و بهتر می‌کنند."
+         data-en="I am Shayan Heidari, a software developer specialized in building scalable, secure, and efficient systems. Passionate about AI and creating smart tools to simplify and enhance life."
+         data-ar="أنا شايان حيدري، مطور برمجيات متخصص في بناء أنظمة قابلة للتوسع، آمنة وفعالة. شغوف بالذكاء الاصطناعي وابتكار أدوات ذكية لتبسيط وتحسين الحياة.">
+        من شایان حیدری هستم، توسعه‌دهنده نرم‌افزار با تخصص در ساخت سیستم‌های مقیاس‌پذیر، امن و بهینه. علاقه‌مند به هوش مصنوعی و خلق ابزارهای هوشمند که زندگی را ساده‌تر و بهتر می‌کنند.
       </p>
     </header>
 
-    <section>
-      <h3 data-fa="مهارت‌ها" data-en="Skills" data-ar="المهارات">مهارت‌ها</h3>
-      <p data-fa="تسلط بر زبان‌ها و تکنولوژی‌های متنوع برنامه‌نویسی برای توسعه سیستم‌های مقیاس‌پذیر، امن و بهینه."
-         data-en="Proficient in diverse programming languages and technologies to build scalable, secure, and efficient systems."
-         data-ar="إتقان لغات وتقنيات برمجية متنوعة لبناء أنظمة قابلة للتوسع وآمنة وفعالة.">
-        تسلط بر زبان‌ها و تکنولوژی‌های متنوع برنامه‌نویسی برای توسعه سیستم‌های مقیاس‌پذیر، امن و بهینه.
+    <section aria-labelledby="skills-title">
+      <h3 id="skills-title" data-fa="مهارت‌ها" data-en="Skills" data-ar="المهارات">مهارت‌ها</h3>
+      <p data-fa="تسلط بر زبان‌ها و فناوری‌های متنوع برنامه‌نویسی، چارچوب‌ها و ابزارها برای توسعه نرم‌افزارهای قدرتمند، امن و مقیاس‌پذیر."
+         data-en="Proficient in diverse programming languages, frameworks, and tools to develop powerful, secure, and scalable software."
+         data-ar="إتقان لغات برمجة متنوعة، أُطُر وأدوات لتطوير برمجيات قوية، آمنة وقابلة للتوسع.">
+        تسلط بر زبان‌ها و فناوری‌های متنوع برنامه‌نویسی، چارچوب‌ها و ابزارها برای توسعه نرم‌افزارهای قدرتمند، امن و مقیاس‌پذیر.
       </p>
-      <div class="skills">
-        <div class="skill"><i class="fab fa-python"></i>Python</div>
-        <div class="skill"><i class="fab fa-php"></i>PHP</div>
-        <div class="skill"><i class="fas fa-code-branch"></i>C++</div>
-        <div class="skill"><i class="fas fa-code"></i>C</div>
-        <div class="skill"><i class="fab fa-go"></i>Go</div>
-        <div class="skill"><i class="fas fa-mobile-alt"></i>Dart</div>
-        <div class="skill"><i class="fas fa-bolt"></i>Rust</div>
-        <div class="skill"><i class="fab fa-js-square"></i>JavaScript</div>
-        <div class="skill"><i class="fab fa-java"></i>Java</div>
-        <div class="skill"><i class="fas fa-database"></i>SQL</div>
-        <div class="skill"><i class="fas fa-mobile"></i>Flutter</div>
+      <div class="skills" role="list">
+        <div class="skill" role="listitem"><i class="fab fa-python" aria-hidden="true"></i>Python</div>
+        <div class="skill" role="listitem"><i class="fab fa-php" aria-hidden="true"></i>PHP</div>
+        <div class="skill" role="listitem"><i class="fas fa-code-branch" aria-hidden="true"></i>C++</div>
+        <div class="skill" role="listitem"><i class="fas fa-code" aria-hidden="true"></i>C</div>
+        <div class="skill" role="listitem"><i class="fab fa-go" aria-hidden="true"></i>Go</div>
+        <div class="skill" role="listitem"><i class="fas fa-mobile-alt" aria-hidden="true"></i>Dart</div>
+        <div class="skill" role="listitem"><i class="fas fa-bolt" aria-hidden="true"></i>Rust</div>
+        <div class="skill" role="listitem"><i class="fab fa-js-square" aria-hidden="true"></i>JavaScript</div>
+        <div class="skill" role="listitem"><i class="fab fa-java" aria-hidden="true"></i>Java</div>
+        <div class="skill" role="listitem"><i class="fas fa-database" aria-hidden="true"></i>SQL</div>
+        <div class="skill" role="listitem"><i class="fas fa-mobile" aria-hidden="true"></i>Flutter</div>
       </div>
     </section>
 
-    <section>
-      <h3 data-fa="پروژه‌های برجسته" data-en="Highlighted Projects" data-ar="المشاريع المميزة">پروژه‌های برجسته</h3>
-      <p data-fa="نمونه‌ای از پروژه‌هایی که با تمرکز بر نوآوری، کارایی، و تجربه کاربری برتر توسعه داده شده‌اند."
-         data-en="A selection of projects developed with a focus on innovation, performance, and exceptional user experience."
-         data-ar="مجموعة من المشاريع التي تم تطويرها مع التركيز على الابتكار والأداء وتجربة المستخدم المميزة.">
-        نمونه‌ای از پروژه‌هایی که با تمرکز بر نوآوری، کارایی، و تجربه کاربری برتر توسعه داده شده‌اند.
+    <section aria-labelledby="projects-title">
+      <h3 id="projects-title" data-fa="پروژه‌های برجسته" data-en="Highlighted Projects" data-ar="المشاريع المميزة">پروژه‌های برجسته</h3>
+      <p data-fa="نمونه‌هایی از پروژه‌های موفق و نوآورانه که در آن‌ها مسئولیت طراحی، توسعه و پیاده‌سازی داشتم."
+         data-en="Examples of successful and innovative projects where I was responsible for design, development, and implementation."
+         data-ar="نماذج من المشاريع الناجحة والمبتكرة التي كنت مسؤولاً عن تصميمها وتطويرها وتنفيذها.">
+        نمونه‌هایی از پروژه‌های موفق و نوآورانه که در آن‌ها مسئولیت طراحی، توسعه و پیاده‌سازی داشتم.
       </p>
-      <div class="cards">
-        <div class="card">
+      <div class="cards" role="list">
+        <div class="card" role="listitem" tabindex="0">
           <h4>Simorgh CMS</h4>
-          <p>یک سیستم مدیریت محتوای پیشرفته با پایتون، طراحی‌شده برای مقیاس‌پذیری بالا، امنیت پیشرفته و سفارشی‌سازی کامل.</p>
+          <p data-fa="سیستم مدیریت محتوای پیشرفته با پایتون، طراحی شده برای عملکرد سریع، امنیت بالا و سفارشی‌سازی کامل."
+             data-en="An advanced Python CMS designed for fast performance, high security, and full customization."
+             data-ar="نظام إدارة محتوى متقدم مبني على بايثون، مصمم للأداء السريع، الأمان العالي والتخصيص الكامل.">
+            سیستم مدیریت محتوای پیشرفته با پایتون، طراحی شده برای عملکرد سریع، امنیت بالا و سفارشی‌سازی کامل.
+          </p>
         </div>
-        <div class="card">
+        <div class="card" role="listitem" tabindex="0">
           <h4>Ormax ORM</h4>
-          <p>یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند.</p>
+          <p data-fa="یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند."
+             data-en="A lightweight, fast, async Python ORM that simplifies and enhances database development."
+             data-ar="ORM خفيف وسريع ومتزامن للبايثون يبسط ويعزز تطوير قواعد البيانات.">
+            یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند.
+          </p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h3 data-fa="اطلاعات تماس" data-en="Contact" data-ar="التواصل">اطلاعات تماس</h3>
+    <section aria-labelledby="contact-title">
+      <h3 id="contact-title" data-fa="اطلاعات تماس" data-en="Contact" data-ar="التواصل">اطلاعات تماس</h3>
       <ul>
-        <li><i class="fas fa-envelope"></i> 
-          <a href="mailto:shayanheidari01@gmail.com">shayanheidari01@gmail.com</a>
-        </li>
-        <li><i class="fab fa-github"></i> 
-          <a href="https://github.com/shayanheidari01" target="_blank" rel="noopener">
-            پروفایل گیت‌هاب شایان حیدری
-          </a>
-        </li>
+        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Shayanheidari01@gmail.com" rel="noopener noreferrer" target="_blank" aria-label="ایمیل شایان حیدری">Shayanheidari01@gmail.com</a></li>
+        <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/shayanheidari01" rel="noopener noreferrer" target="_blank" aria-label="گیت‌هاب شایان حیدری">github.com/shayanheidari01</a></li>
       </ul>
     </section>
 
     <footer>
-      طراحی و توسعه با ❤️ توسط شایان حیدری
+      <span data-fa="طراحی و توسعه با ❤️ توسط شایان حیدری"
+            data-en="Designed & Developed with ❤️ by Shayan Heidari"
+            data-ar="تم التصميم والتطوير ❤️ بواسطة شايان حيدري">
+        طراحی و توسعه با ❤️ توسط شایان حیدری
+      </span>
     </footer>
   </div>
 
@@ -218,25 +315,34 @@
     const langBtn = document.getElementById('langBtn');
     const themeBtn = document.getElementById('themeBtn');
 
-    langBtn.addEventListener('click', () => {
-      currentLang = (currentLang + 1) % langs.length;
-      const lang = langs[currentLang];
+    // نمایش زبان و متن‌ها بر اساس انتخاب
+    function updateLanguage(lang) {
       document.querySelectorAll('[data-fa]').forEach(el => el.textContent = el.dataset[lang]);
       document.documentElement.lang = lang;
       document.documentElement.dir = (lang === 'ar' || lang === 'fa') ? 'rtl' : 'ltr';
+    }
+
+    langBtn.addEventListener('click', () => {
+      currentLang = (currentLang + 1) % langs.length;
+      updateLanguage(langs[currentLang]);
     });
 
-    themeBtn.addEventListener('click', function() {
+    themeBtn.addEventListener('click', () => {
       document.body.classList.toggle('light');
-      this.innerHTML = document.body.classList.contains('light')
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
+      thisIcon = document.body.classList.contains('light') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      themeBtn.innerHTML = thisIcon;
     });
 
+    // انیمیشن ورود بخش‌ها با Intersection Observer
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('show');
+      });
     }, { threshold: 0.1 });
     document.querySelectorAll('.container, section').forEach(el => observer.observe(el));
+
+    // تنظیم زبان اولیه
+    updateLanguage(langs[currentLang]);
   </script>
 </body>
 </html>
