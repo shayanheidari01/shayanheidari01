@@ -5,14 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>شایان حیدری | توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی</title>
-  <meta name="description" content="شایان حیدری، توسعه‌دهنده نرم‌افزار و مهندس بک‌اند متخصص در پایتون، PHP، Rust، Dart و Flutter. علاقه‌مند به هوش مصنوعی و ساخت راهکارهای نرم‌افزاری هوشمند و مقیاس‌پذیر. نمونه کارها، مهارت‌ها و پروژه‌های شایان حیدری را در این صفحه ببینید." />
-  <meta name="keywords" content="شایان حیدری, توسعه دهنده نرم افزار, برنامه نویس, Python, PHP, Rust, Dart, Flutter, هوش مصنوعی, بک اند, Backend Developer, AI Developer" />
+  <meta name="description" content="شایان حیدری، توسعه‌دهنده نرم‌افزار و مهندس بک‌اند متخصص در پایتون، PHP، Rust، Dart و Flutter. سازنده Ormax ORM، Simorgh CMS و Rubpy. علاقه‌مند به هوش مصنوعی و ساخت راهکارهای نرم‌افزاری هوشمند." />
+  <meta name="keywords" content="شایان حیدری, توسعه دهنده نرم افزار, برنامه نویس, Python, PHP, Rust, Dart, Flutter, هوش مصنوعی, بک اند, Backend Developer, AI Developer, Ormax ORM, Simorgh CMS, Rubpy" />
   <meta name="author" content="Shayan Heidari" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1b2132" />
   <link rel="canonical" href="https://shayan-heidari.ir/" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="شایان حیدری | توسعه‌دهنده نرم‌افزار و متخصص هوش مصنوعی" />
+  <meta property="og:description" content="توسعه‌دهنده نرم‌افزار متخصص در پایتون، PHP، Rust و Flutter. سازنده Ormax ORM و Simorgh CMS." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/119259115?v=4" />
+  <meta property="og:url" content="https://shayan-heidari.ir/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:locale" content="fa_IR" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="شایان حیدری | توسعه‌دهنده نرم‌افزار" />
+  <meta name="twitter:description" content="توسعه‌دهنده نرم‌افزار متخصص در پایتون، PHP، Rust و Flutter" />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/119259115?v=4" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <script type="application/ld+json">
@@ -20,206 +34,680 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Shayan Heidari",
+    "alternateName": "شایان حیدری",
     "jobTitle": "Software Developer & Backend Engineer",
     "url": "https://shayan-heidari.ir/",
     "image": "https://avatars.githubusercontent.com/u/119259115?v=4",
     "sameAs": [
       "https://github.com/shayanheidari01",
-      "mailto:shayanheidari01@gmail.com"
+      "https://ormax.shayan-heidari.ir/",
+      "https://rubpy.shayan-heidari.ir/"
+    ],
+    "email": "shayanheidari01@gmail.com",
+    "knowsAbout": ["Python", "PHP", "Rust", "Dart", "Flutter", "Backend Development", "Artificial Intelligence", "Software Architecture"],
+    "hasCredential": [
+      {
+        "@type": "CreativeWork",
+        "name": "Ormax ORM",
+        "description": "یک ORM سبک، سریع و Async برای پایتون",
+        "url": "https://ormax.shayan-heidari.ir/"
+      },
+      {
+        "@type": "CreativeWork", 
+        "name": "Simorgh CMS",
+        "description": "سیستم مدیریت محتوای پیشرفته با پایتون",
+        "url": "https://github.com/shayanheidari01/SimorghCMS"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Rubpy",
+        "description": "کتابخانه پایتون برای ربات‌های روبیکا",
+        "url": "https://rubpy.shayan-heidari.ir/"
+      }
     ],
     "description": "شایان حیدری، توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و علاقه‌مند به هوش مصنوعی."
   }
   </script>
 
   <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(135deg, #1b2132, #2c354a, #1b2132);
-      margin: 0; padding: 0;
-      color: #e1e6f0;
-      transition: background 0.5s ease, color 0.5s ease;
+    :root {
+      --primary-color: #00ffc8;
+      --primary-dark: #00bfa5;
+      --background-dark: #1b2132;
+      --background-light: #f8fafc;
+      --card-dark: rgba(255, 255, 255, 0.08);
+      --card-light: #ffffff;
+      --text-dark: #e1e6f0;
+      --text-light: #1a202c;
+      --border-dark: rgba(255, 255, 255, 0.15);
+      --border-light: rgba(0, 0, 0, 0.1);
+      --shadow-dark: rgba(0, 0, 0, 0.3);
+      --shadow-light: rgba(0, 0, 0, 0.1);
     }
-    body.light { background: #f7fafa; color: #111; }
+
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--background-dark), #2c354a, var(--background-dark));
+      background-attachment: fixed;
+      color: var(--text-dark);
+      line-height: 1.7;
+      transition: all 0.5s ease;
+      overflow-x: hidden;
+    }
+    
+    body.light { 
+      background: linear-gradient(135deg, var(--background-light), #e2e8f0, var(--background-light));
+      color: var(--text-light); 
+    }
+    
     .container {
-      max-width: 960px;
-      margin: 50px auto;
-      padding: 35px 40px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 28px;
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
-      backdrop-filter: blur(14px);
-      transform: translateY(40px);
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 40px;
+      background: var(--card-dark);
+      border-radius: 32px;
+      box-shadow: 0 25px 60px var(--shadow-dark);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-dark);
+      transform: translateY(50px);
       opacity: 0;
-      transition: all 1s ease, background 0.5s ease;
+      transition: all 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
       position: relative;
     }
-    body.light .container { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
-    .show { transform: translateY(0); opacity: 1; }
+    
+    body.light .container { 
+      background: var(--card-light); 
+      box-shadow: 0 20px 40px var(--shadow-light);
+      border: 1px solid var(--border-light);
+    }
+    
+    .show { 
+      transform: translateY(0); 
+      opacity: 1; 
+    }
 
-    /* کنترل‌ها */
+    /* Enhanced Controls */
     .top-controls {
       position: absolute;
-      top: 20px; left: 20px;
-      display: flex; gap: 10px;
-      z-index: 10;
+      top: 25px; 
+      left: 25px;
+      display: flex; 
+      gap: 15px;
+      z-index: 100;
     }
+    
     .top-controls button {
-      background: rgba(255,255,255,0.12);
-      border: none; padding: 8px;
-      border-radius: 50%; cursor: pointer;
-      color: #00ffc8; font-size: 18px;
-      transition: background 0.3s ease, transform 0.2s ease;
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      padding: 12px;
+      border-radius: 50%; 
+      cursor: pointer;
+      color: var(--primary-color); 
+      font-size: 18px;
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      backdrop-filter: blur(10px);
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .top-controls button:hover { background: rgba(0,255,200,0.2); transform: scale(1.1); }
-    body.light .top-controls button { background: rgba(0,150,136,0.12); color: #00695c; }
-    body.light .top-controls button:hover { background: rgba(0,150,136,0.2); }
+    
+    .top-controls button:hover { 
+      background: var(--primary-color); 
+      color: var(--background-dark);
+      transform: scale(1.1) rotate(5deg); 
+      box-shadow: 0 8px 25px rgba(0, 255, 200, 0.4);
+    }
+    
+    body.light .top-controls button { 
+      background: var(--card-light); 
+      color: var(--primary-dark);
+      border: 1px solid var(--border-light);
+    }
+    
+    body.light .top-controls button:hover { 
+      background: var(--primary-dark); 
+      color: white;
+      box-shadow: 0 8px 25px rgba(0, 191, 165, 0.3);
+    }
 
+    /* Enhanced Header */
     header {
       text-align: center;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 40px;
+      border-bottom: 2px solid var(--border-dark);
+      margin-bottom: 50px;
     }
-    body.light header { border-bottom: 1px solid rgba(0,0,0,0.1); }
+    
+    body.light header { 
+      border-bottom: 2px solid var(--border-light); 
+    }
 
+    .profile-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    
     header img {
-      width: 150px; height: 150px;
+      width: 180px; 
+      height: 180px;
       border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.5);
+      border: 4px solid var(--primary-color);
       object-fit: cover;
-      box-shadow: 0 0 28px rgba(0, 0, 0, 0.45);
-      animation: float 4s ease-in-out infinite;
+      box-shadow: 0 15px 40px var(--shadow-dark);
+      animation: float 6s ease-in-out infinite;
+      transition: all 0.5s ease;
+      position: relative;
+      z-index: 2;
     }
-    @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);} }
+    
+    .profile-container::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      background: conic-gradient(var(--primary-color), #ff6b6b, #4ecdc4, var(--primary-color));
+      border-radius: 50%;
+      animation: rotate 20s linear infinite;
+      z-index: 1;
+    }
+    
+    .profile-container::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: var(--card-dark);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    body.light .profile-container::after {
+      background: var(--card-light);
+    }
+    
+    @keyframes float { 
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-10px) rotate(1deg); }
+      66% { transform: translateY(-5px) rotate(-1deg); }
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
-    h1 { font-size: 32px; margin: 18px 0 6px; font-weight:700; }
-    h2 { font-size: 18px; font-weight:400; color: #99e9d9; margin:0; }
-    body.light h2 { color: #009688; }
+    h1 { 
+      font-size: 42px; 
+      margin: 20px 0 10px; 
+      font-weight: 700; 
+      background: linear-gradient(45deg, var(--primary-color), #4ecdc4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle { 
+      font-size: 20px; 
+      font-weight: 500; 
+      color: var(--primary-color); 
+      margin: 0 0 25px;
+      opacity: 0.9;
+    }
+    
+    body.light .subtitle { 
+      color: var(--primary-dark); 
+    }
+    
+    .description {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
 
+    /* Enhanced Sections */
     section {
-      margin:45px 0;
-      opacity:0;
-      transform:translateY(50px);
-      transition:all 0.85s ease;
+      margin: 60px 0;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    section.show { opacity:1; transform:translateY(0); }
+    
+    section.show { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
 
     section h3 {
-      font-size:22px;
-      color:#00ffc8;
-      border-bottom:3px solid #00ffc8;
-      padding-bottom:8px;
-      margin-bottom:25px;
+      font-size: 28px;
+      color: var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 12px;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
     }
-    body.light section h3 { color: #00bfa5; border-color: #00bfa5; }
+    
+    section h3::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), #4ecdc4);
+      transition: width 0.8s ease;
+    }
+    
+    section.show h3::after {
+      width: 100%;
+    }
+    
+    body.light section h3 { 
+      color: var(--primary-dark); 
+      border-color: var(--primary-dark); 
+    }
 
+    /* Enhanced Skills */
     .skills {
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      justify-content:center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
+    
     .skill {
-      background: rgba(255,255,255,0.12);
-      padding:12px 20px;
-      border-radius:25px;
-      font-size:15px;
-      font-weight:600;
-      border:1.5px solid rgba(255,255,255,0.18);
-      display:flex;
-      align-items:center;
-      gap:8px;
-      transition:all 0.4s ease;
+      background: var(--card-dark);
+      padding: 20px 15px;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid var(--border-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+      cursor: pointer;
+      text-align: center;
     }
-    .skill i { color:#00ffc8; }
+    
+    .skill i { 
+      color: var(--primary-color); 
+      font-size: 28px;
+      transition: all 0.3s ease;
+    }
+    
     .skill:hover {
-      background:#00ffc8;
-      color:#1a1a1a;
-      transform:scale(1.18) rotate(-2deg);
-      box-shadow:0 10px 30px rgba(0,255,200,0.45);
+      background: var(--primary-color);
+      color: var(--background-dark);
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(0, 255, 200, 0.5);
+      border-color: transparent;
     }
+    
+    .skill:hover i {
+      color: var(--background-dark);
+      transform: scale(1.2) rotateY(180deg);
+    }
+    
     body.light .skill {
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.06);
+      background: var(--card-light);
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 15px var(--shadow-light);
     }
-    body.light .skill i { color: #00bfa5; }
-    body.light .skill:hover { background: #00bfa5; color: #fff; }
+    
+    body.light .skill i { 
+      color: var(--primary-dark); 
+    }
+    
+    body.light .skill:hover { 
+      background: var(--primary-dark); 
+      color: white;
+      box-shadow: 0 15px 35px rgba(0, 191, 165, 0.3);
+    }
+    
+    body.light .skill:hover i {
+      color: white;
+    }
 
+    /* Enhanced Cards */
     .cards {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-      gap:26px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
     }
+    
     .card {
-      background:rgba(255,255,255,0.07);
-      padding:26px 22px;
-      border-radius:20px;
-      border:1.5px solid rgba(255,255,255,0.12);
-      transition:all 0.45s ease;
-      cursor:pointer;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
+      background: var(--card-dark);
+      padding: 35px 30px;
+      border-radius: 25px;
+      border: 1px solid var(--border-dark);
+      transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
     }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .card:hover::before {
+      left: 100%;
+    }
+    
     .card:hover {
-      transform:translateY(-8px);
-      background:rgba(0,255,200,0.15);
-      border-color:#00ffc8;
-      box-shadow:0 14px 45px rgba(0,255,200,0.55);
+      transform: translateY(-12px);
+      background: linear-gradient(135deg, var(--card-dark), rgba(0, 255, 200, 0.1));
+      border-color: var(--primary-color);
+      box-shadow: 0 20px 50px rgba(0, 255, 200, 0.4);
     }
+    
     body.light .card {
-      background: #fff;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      background: var(--card-light);
+      border: 1px solid var(--border-light);
+      box-shadow: 0 8px 25px var(--shadow-light);
     }
+    
     body.light .card:hover {
-      background: #e0f8f5;
-      border-color: #00bfa5;
-      box-shadow: 0 10px 25px rgba(0,191,165,0.25);
+      background: linear-gradient(135deg, #f0fdfa, #e6fffa);
+      border-color: var(--primary-dark);
+      box-shadow: 0 20px 50px rgba(0, 191, 165, 0.25);
     }
-    .card h4 { margin:0; color:#00ffc8; font-weight:700; }
-    body.light .card h4 { color: #00bfa5; }
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, var(--primary-color), #4ecdc4);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+    
+    .card h4 { 
+      margin: 0; 
+      color: var(--primary-color); 
+      font-weight: 700; 
+      font-size: 22px;
+      flex: 1;
+    }
+    
+    body.light .card h4 { 
+      color: var(--primary-dark); 
+    }
+    
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+    
+    .card-link:hover {
+      transform: translateX(-5px);
+      color: #4ecdc4;
+    }
+    
+    body.light .card-link {
+      color: var(--primary-dark);
+    }
+    
+    body.light .card-link:hover {
+      color: #00695c;
+    }
 
+    /* Enhanced Contact */
+    .contact-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .contact-item {
+      background: var(--card-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: 20px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(135deg, var(--card-dark), rgba(0, 255, 200, 0.1));
+      border-color: var(--primary-color);
+      box-shadow: 0 10px 30px rgba(0, 255, 200, 0.3);
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, var(--primary-color), #4ecdc4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+    
+    .contact-info h4 {
+      margin: 0 0 5px;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+    
+    .contact-info span {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+    
+    body.light .contact-item {
+      background: var(--card-light);
+      border: 1px solid var(--border-light);
+    }
+    
+    body.light .contact-item:hover {
+      background: linear-gradient(135deg, #f0fdfa, #e6fffa);
+      border-color: var(--primary-dark);
+      box-shadow: 0 10px 30px rgba(0, 191, 165, 0.2);
+    }
+    
+    body.light .contact-info h4 {
+      color: var(--primary-dark);
+    }
+
+    /* Enhanced Footer */
     footer {
-      text-align:center;
-      font-size:13px;
-      color:rgba(255,255,255,0.6);
-      border-top:1px solid rgba(255,255,255,0.15);
-      padding-top:14px;
-      margin-top:50px;
+      text-align: center;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      border-top: 2px solid var(--border-dark);
+      padding-top: 30px;
+      margin-top: 60px;
+      position: relative;
     }
+    
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    }
+    
     body.light footer {
-      border-top:1px solid rgba(0,0,0,0.08);
-      color:#555;
+      border-top: 2px solid var(--border-light);
+      color: #64748b;
     }
 
-    ul { padding-left:1.2em; }
-    ul li {
-      margin-bottom:8px;
-      display:flex;
-      align-items:center;
-      gap:8px;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container { 
+        margin: 20px; 
+        padding: 30px 25px; 
+      }
+      
+      .top-controls {
+        top: 15px;
+        left: 15px;
+        gap: 10px;
+      }
+      
+      .top-controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+      
+      h1 { 
+        font-size: 32px; 
+      }
+      
+      .subtitle {
+        font-size: 18px;
+      }
+      
+      .description {
+        font-size: 16px;
+      }
+      
+      header img {
+        width: 150px;
+        height: 150px;
+      }
+      
+      section h3 {
+        font-size: 24px;
+      }
+      
+      .skills { 
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+      }
+      
+      .cards { 
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .card {
+        padding: 25px 20px;
+      }
+      
+      .contact-list {
+        grid-template-columns: 1fr;
+      }
     }
-    ul li i { color:#00ffc8; }
-    body.light ul li i { color:#00bfa5; }
 
-    a {
-      color:#00ffc8;
-      text-decoration:none;
-      transition:color 0.3s ease;
+    @media (max-width: 480px) {
+      .container {
+        margin: 15px;
+        padding: 25px 20px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    a:hover { color:#b2fff0; }
-    body.light a { color: #00bfa5; }
-    body.light a:hover { color: #009688; }
 
-    @media(max-width:620px) {
-      .skills { justify-content:center; }
-      .cards { grid-template-columns:1fr; }
-      .container { margin:30px 20px; padding:25px 20px; }
+    /* Loading Animation */
+    .loading {
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+    
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+    }
+    
+    .scroll-progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), #4ecdc4);
+      width: 0;
+      transition: width 0.1s ease;
     }
   </style>
 </head>
 <body>
+  <div class="scroll-indicator">
+    <div class="scroll-progress"></div>
+  </div>
+
   <div class="container">
     <div class="top-controls" role="navigation" aria-label="Language and theme controls">
       <button id="langBtn" title="تغییر زبان" aria-label="تغییر زبان"><i class="fas fa-language"></i></button>
@@ -227,12 +715,14 @@
     </div>
 
     <header>
-      <img loading="lazy" src="https://avatars.githubusercontent.com/u/119259115?v=4" alt="تصویر پروفایل شایان حیدری" />
+      <div class="profile-container">
+        <img loading="lazy" src="https://avatars.githubusercontent.com/u/119259115?v=4" alt="تصویر پروفایل شایان حیدری" />
+      </div>
       <h1 data-fa="شایان حیدری" data-en="Shayan Heidari" data-ar="شايان حيدري">شایان حیدری</h1>
-      <h2 class="typewriter" data-fa="توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی"
+      <div class="subtitle" data-fa="توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی"
           data-en="Software Developer, Backend Engineer & AI Specialist"
-          data-ar="مطور برمجيات، مهندس خلفية و متخصص الذكاء الاصطناعي">توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی</h2>
-      <p data-fa="من شایان حیدری هستم، بنیان‌گذار و مالک پروگرولوژی، توسعه‌دهنده نرم‌افزار با تخصص در ساخت سیستم‌های مقیاس‌پذیر، امن و بهینه. علاقه‌مند به هوش مصنوعی و خلق ابزارهای هوشمند که زندگی را ساده‌تر و بهتر می‌کنند."
+          data-ar="مطور برمجيات، مهندس خلفية و متخصص الذكاء الاصطناعي">توسعه‌دهنده نرم‌افزار، مهندس بک‌اند و متخصص هوش مصنوعی</div>
+      <p class="description" data-fa="من شایان حیدری هستم، توسعه‌دهنده نرم‌افزار با تخصص در ساخت سیستم‌های مقیاس‌پذیر، امن و بهینه. علاقه‌مند به هوش مصنوعی و خلق ابزارهای هوشمند که زندگی را ساده‌تر و بهتر می‌کنند."
          data-en="I am Shayan Heidari, a software developer specialized in building scalable, secure, and efficient systems. Passionate about AI and creating smart tools to simplify and enhance life."
          data-ar="أنا شايان حيدري، مطور برمجيات متخصص في بناء أنظمة قابلة للتوسع، آمنة وفعالة. شغوف بالذكاء الاصطناعي وابتكار أدوات ذكية لتبسيط وتحسين الحياة.">
         من شایان حیدری هستم، توسعه‌دهنده نرم‌افزار با تخصص در ساخت سیستم‌های مقیاس‌پذیر، امن و بهینه. علاقه‌مند به هوش مصنوعی و خلق ابزارهای هوشمند که زندگی را ساده‌تر و بهتر می‌کنند.
@@ -240,7 +730,7 @@
     </header>
 
     <section aria-labelledby="skills-title">
-      <h3 id="skills-title" data-fa="مهارت‌ها" data-en="Skills" data-ar="المهارات">مهارت‌ها</h3>
+      <h3 id="skills-title" data-fa="مهارت‌ها و تخصص‌ها" data-en="Skills & Expertise" data-ar="المهارات والخبرات">مهارت‌ها و تخصص‌ها</h3>
       <p data-fa="تسلط بر زبان‌ها و فناوری‌های متنوع برنامه‌نویسی، چارچوب‌ها و ابزارها برای توسعه نرم‌افزارهای قدرتمند، امن و مقیاس‌پذیر."
          data-en="Proficient in diverse programming languages, frameworks, and tools to develop powerful, secure, and scalable software."
          data-ar="إتقان لغات برمجة متنوعة، أُطُر وأدوات لتطوير برمجيات قوية، آمنة وقابلة للتوسع.">
@@ -249,20 +739,21 @@
       <div class="skills" role="list">
         <div class="skill" role="listitem"><i class="fab fa-python" aria-hidden="true"></i>Python</div>
         <div class="skill" role="listitem"><i class="fab fa-php" aria-hidden="true"></i>PHP</div>
+        <div class="skill" role="listitem"><i class="fas fa-bolt" aria-hidden="true"></i>Rust</div>
+        <div class="skill" role="listitem"><i class="fas fa-mobile-alt" aria-hidden="true"></i>Dart</div>
         <div class="skill" role="listitem"><i class="fas fa-code-branch" aria-hidden="true"></i>C++</div>
         <div class="skill" role="listitem"><i class="fas fa-code" aria-hidden="true"></i>C</div>
         <div class="skill" role="listitem"><i class="fab fa-go" aria-hidden="true"></i>Go</div>
-        <div class="skill" role="listitem"><i class="fas fa-mobile-alt" aria-hidden="true"></i>Dart</div>
-        <div class="skill" role="listitem"><i class="fas fa-bolt" aria-hidden="true"></i>Rust</div>
         <div class="skill" role="listitem"><i class="fab fa-js-square" aria-hidden="true"></i>JavaScript</div>
         <div class="skill" role="listitem"><i class="fab fa-java" aria-hidden="true"></i>Java</div>
         <div class="skill" role="listitem"><i class="fas fa-database" aria-hidden="true"></i>SQL</div>
         <div class="skill" role="listitem"><i class="fas fa-mobile" aria-hidden="true"></i>Flutter</div>
+        <div class="skill" role="listitem"><i class="fas fa-robot" aria-hidden="true"></i>AI/ML</div>
       </div>
     </section>
 
     <section aria-labelledby="projects-title">
-      <h3 id="projects-title" data-fa="پروژه‌های برجسته" data-en="Highlighted Projects" data-ar="المشاريع المميزة">پروژه‌های برجسته</h3>
+      <h3 id="projects-title" data-fa="پروژه‌های برجسته" data-en="Featured Projects" data-ar="المشاريع المميزة">پروژه‌های برجسته</h3>
       <p data-fa="نمونه‌هایی از پروژه‌های موفق و نوآورانه که در آن‌ها مسئولیت طراحی، توسعه و پیاده‌سازی داشتم."
          data-en="Examples of successful and innovative projects where I was responsible for design, development, and implementation."
          data-ar="نماذج من المشاريع الناجحة والمبتكرة التي كنت مسؤولاً عن تصميمها وتطويرها وتنفيذها.">
@@ -270,30 +761,84 @@
       </p>
       <div class="cards" role="list">
         <div class="card" role="listitem" tabindex="0">
-          <h4>Simorgh CMS</h4>
-          <p data-fa="سیستم مدیریت محتوای پیشرفته با پایتون، طراحی شده برای عملکرد سریع، امنیت بالا و سفارشی‌سازی کامل."
-             data-en="An advanced Python CMS designed for fast performance, high security, and full customization."
-             data-ar="نظام إدارة محتوى متقدم مبني على بايثون، مصمم للأداء السريع، الأمان العالي والتخصيص الكامل.">
-            سیستم مدیریت محتوای پیشرفته با پایتون، طراحی شده برای عملکرد سریع، امنیت بالا و سفارشی‌سازی کامل.
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h4>Ormax ORM</h4>
+          </div>
+          <p data-fa="یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند. با پشتیبانی از چندین دیتابیس و قابلیت‌های پیشرفته."
+             data-en="A lightweight, fast, async Python ORM that simplifies and enhances database development with multi-database support and advanced features."
+             data-ar="ORM خفيف وسريع ومتزامن للبايثون يبسط ويعزز تطوير قواعد البيانات مع دعم قواعد البيانات المتعددة والميزات المتقدمة.">
+            یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند. با پشتیبانی از چندین دیتابیس و قابلیت‌های پیشرفته.
           </p>
+          <a href="https://ormax.shayan-heidari.ir/" class="card-link" target="_blank" rel="noopener noreferrer">
+            <span data-fa="مشاهده پروژه" data-en="View Project" data-ar="عرض المشروع">مشاهده پروژه</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
+        
         <div class="card" role="listitem" tabindex="0">
-          <h4>Ormax ORM</h4>
-          <p data-fa="یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند."
-             data-en="A lightweight, fast, async Python ORM that simplifies and enhances database development."
-             data-ar="ORM خفيف وسريع ومتزامن للبايثون يبسط ويعزز تطوير قواعد البيانات.">
-            یک ORM سبک، سریع و Async برای پایتون که توسعه و مدیریت دیتابیس را ساده و لذت‌بخش می‌کند.
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h4>Simorgh CMS</h4>
+          </div>
+          <p data-fa="سیستم مدیریت محتوای پیشرفته با پایتون، طراحی شده برای عملکرد سریع، امنیت بالا و سفارشی‌سازی کامل. راهکار ایده‌آل برای وب‌سایت‌های مدرن."
+             data-en="An advanced Python CMS designed for fast performance, high security, and full customization. The ideal solution for modern websites."
+             data-ar="نظام إدارة محتوى متقدم مبني على بايثون، مصمم للأداء السريع، الأمان العالي والتخصيص الكامل. الحل الأمثل للمواقع الحديثة.">
+            سیستم مدیریت محتوای پیشرفته با پایتون، طراحی شده برای عملکرد سریع، امنیت بالا و سفارشی‌سازی کامل. راهکار ایده‌آل برای وب‌سایت‌های مدرن.
           </p>
+          <a href="https://github.com/shayanheidari01/SimorghCMS" class="card-link" target="_blank" rel="noopener noreferrer">
+            <span data-fa="مشاهده در گیت‌هاب" data-en="View on GitHub" data-ar="عرض في جيتهاب">مشاهده در گیت‌هاب</span>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        
+        <div class="card" role="listitem" tabindex="0">
+          <div class="card-header">
+            <div class="card-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h4>Rubpy</h4>
+          </div>
+          <p data-fa="کتابخانه قدرتمند پایتون برای توسعه ربات‌های روبیکا با قابلیت‌های پیشرفته و رابط کاربری ساده. ابزار کاملی برای توسعه‌دهندگان ربات."
+             data-en="A powerful Python library for developing Rubika bots with advanced features and simple interface. A complete tool for bot developers."
+             data-ar="مكتبة بايثون قوية لتطوير روبوتات روبيكا مع ميزات متقدمة وواجهة بسيطة. أداة كاملة لمطوري الروبوتات.">
+            کتابخانه قدرتمند پایتون برای توسعه ربات‌های روبیکا با قابلیت‌های پیشرفته و رابط کاربری ساده. ابزار کاملی برای توسعه‌دهندگان ربات.
+          </p>
+          <a href="https://rubpy.shayan-heidari.ir/" class="card-link" target="_blank" rel="noopener noreferrer">
+            <span data-fa="مشاهده مستندات" data-en="View Documentation" data-ar="عرض الوثائق">مشاهده مستندات</span>
+            <i class="fas fa-book"></i>
+          </a>
         </div>
       </div>
     </section>
 
     <section aria-labelledby="contact-title">
-      <h3 id="contact-title" data-fa="اطلاعات تماس" data-en="Contact" data-ar="التواصل">اطلاعات تماس</h3>
-      <ul>
-        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:shayanheidari01@gmail.com" rel="noopener noreferrer" target="_blank" aria-label="ایمیل شایان حیدری">shayanheidari01@gmail.com</a></li>
-        <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/shayanheidari01" rel="noopener noreferrer" target="_blank" aria-label="گیت‌هاب شایان حیدری">github.com/shayanheidari01</a></li>
-      </ul>
+      <h3 id="contact-title" data-fa="اطلاعات تماس" data-en="Contact Information" data-ar="معلومات التواصل">اطلاعات تماس</h3>
+      <div class="contact-list" role="list">
+        <a href="mailto:shayanheidari01@gmail.com" class="contact-item" role="listitem" target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h4 data-fa="ایمیل" data-en="Email" data-ar="البريد الإلكتروني">ایمیل</h4>
+            <span>shayanheidari01@gmail.com</span>
+          </div>
+        </a>
+        
+        <a href="https://github.com/shayanheidari01" class="contact-item" role="listitem" target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-info">
+            <h4 data-fa="گیت‌هاب" data-en="GitHub" data-ar="جيتهاب">گیت‌هاب</h4>
+            <span>github.com/shayanheidari01</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <footer>
@@ -306,39 +851,168 @@
   </div>
 
   <script>
-    const langs = ["fa","en","ar"];
+    // Language Management
+    const langs = ["fa", "en", "ar"];
     let currentLang = 0;
     const langBtn = document.getElementById('langBtn');
     const themeBtn = document.getElementById('themeBtn');
 
-    // نمایش زبان و متن‌ها بر اساس انتخاب
+    // Update Language Function
     function updateLanguage(lang) {
-      document.querySelectorAll('[data-fa]').forEach(el => el.textContent = el.dataset[lang]);
+      document.querySelectorAll('[data-fa]').forEach(el => {
+        if (el.dataset[lang]) {
+          el.textContent = el.dataset[lang];
+        }
+      });
       document.documentElement.lang = lang;
       document.documentElement.dir = (lang === 'ar' || lang === 'fa') ? 'rtl' : 'ltr';
+      
+      // Update meta description for SEO
+      const metaDesc = document.querySelector('meta[name="description"]');
+      const descriptions = {
+        fa: 'شایان حیدری، توسعه‌دهنده نرم‌افزار و مهندس بک‌اند متخصص در پایتون، PHP، Rust، Dart و Flutter. سازنده Ormax ORM، Simorgh CMS و Rubpy.',
+        en: 'Shayan Heidari, Software Developer and Backend Engineer specialized in Python, PHP, Rust, Dart and Flutter. Creator of Ormax ORM, Simorgh CMS and Rubpy.',
+        ar: 'شايان حيدري، مطور برمجيات ومهندس خلفية متخصص في بايثون، PHP، رست، دارت وفلاتر. منشئ Ormax ORM، Simorgh CMS وRubpy.'
+      };
+      metaDesc.content = descriptions[lang];
     }
 
+    // Theme Management
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      const isLight = document.body.classList.contains('light');
+      themeBtn.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+
+    // Initialize Theme from localStorage
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light');
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+      }
+    }
+
+    // Event Listeners
     langBtn.addEventListener('click', () => {
       currentLang = (currentLang + 1) % langs.length;
       updateLanguage(langs[currentLang]);
     });
 
-    themeBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light');
-      thisIcon = document.body.classList.contains('light') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-      themeBtn.innerHTML = thisIcon;
-    });
+    themeBtn.addEventListener('click', toggleTheme);
 
-    // انیمیشن ورود بخش‌ها با Intersection Observer
+    // Intersection Observer for Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if(entry.isIntersecting) entry.target.classList.add('show');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.container, section').forEach(el => observer.observe(el));
+    }, observerOptions);
 
-    // تنظیم زبان اولیه
+    // Observe Elements
+    document.querySelectorAll('.container, section').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Scroll Progress Indicator
+    function updateScrollProgress() {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      document.querySelector('.scroll-progress').style.width = scrollPercent + '%';
+    }
+
+    window.addEventListener('scroll', updateScrollProgress);
+
+    // Smooth Scrolling for Internal Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Keyboard Navigation for Cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          const link = this.querySelector('.card-link');
+          if (link) {
+            link.click();
+          }
+        }
+      });
+    });
+
+    // Loading Animation
+    window.addEventListener('load', () => {
+      document.body.classList.add('loading');
+    });
+
+    // Initialize
+    initTheme();
     updateLanguage(langs[currentLang]);
+
+    // Performance: Lazy load images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src || img.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+
+    // Error Handling for External Links
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        try {
+          // Track external link clicks for analytics
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'click', {
+              event_category: 'External Link',
+              event_label: this.href
+            });
+          }
+        } catch (error) {
+          console.warn('Analytics tracking failed:', error);
+        }
+      });
+    });
+
+    // Service Worker Registration (for PWA capabilities)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
   </script>
 </body>
 </html>
