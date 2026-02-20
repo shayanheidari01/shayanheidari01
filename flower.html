@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Sadia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000000);
+  overflow: hidden;
+  font-family: "Georgia", serif;
+}
+
+.scene {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  position: absolute;
+  top: 40px;
+  font-size: 28px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  color: #f5c6d6;
+  text-transform: lowercase;
+  animation: fadeIn 4s ease forwards;
+  opacity: 0;
+}
+
+svg {
+  width: 300px;
+  height: 500px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+  animation: sway 8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes sway {
+  0%,100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.petal {
+  animation: breathe 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes breathe {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,0,70,0.15), transparent 70%);
+  bottom: 120px;
+  border-radius: 50%;
+  animation: pulse 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <h1>for sadia</h1>
+    <div class="glow"></div><svg viewBox="0 0 300 500">
+  <defs>
+    <linearGradient id="stemGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e7d32"/>
+      <stop offset="100%" stop-color="#145a1f"/>
+    </linearGradient>
+
+    <radialGradient id="petalGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ff4d6d"/>
+      <stop offset="60%" stop-color="#c2185b"/>
+      <stop offset="100%" stop-color="#6a0f2b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Stem -->
+  <path d="M150 480 C140 380 160 280 150 180" stroke="url(#stemGrad)" stroke-width="8" fill="none" stroke-linecap="round" />
+
+  <!-- Leaves -->
+  <path d="M150 330 C100 310 90 260 140 280 C160 290 170 320 150 330" fill="#1b5e20" />
+  <path d="M150 250 C200 230 210 190 160 210 C140 220 130 240 150 250" fill="#1b5e20" />
+
+  <!-- Rose Petals -->
+  <g class="petal">
+    <path d="M150 160 C120 130 120 90 150 70 C180 90 180 130 150 160" fill="url(#petalGrad)" />
+    <path d="M150 160 C100 150 90 110 120 90 C140 110 140 140 150 160" fill="url(#petalGrad)" />
+    <path d="M150 160 C200 150 210 110 180 90 C160 110 160 140 150 160" fill="url(#petalGrad)" />
+    <path d="M150 145 C130 120 140 95 150 85 C160 95 170 120 150 145" fill="#ff6f91" opacity="0.9"/>
+  </g>
+</svg>
+
+  </div>
+</body>
+</html>
