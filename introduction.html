@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quantum Terminal Intro</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --radius: 14px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, #050b12, #000),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  overflow: hidden;
+}
+
+.terminal {
+  width: 880px;
+  max-width: 96%;
+  background: rgba(10,14,20,.95);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow:
+    0 0 40px rgba(0,255,170,.25),
+    inset 0 0 20px rgba(0,255,170,.08);
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(to right, #111, #0a0f14);
+  padding: 8px 10px;
+  display: flex;
+  gap: 7px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.screen {
+  padding: 20px;
+  color: #9ef7cf;
+  font-size: 15px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  text-shadow: 0 0 8px rgba(100,255,200,.35);
+}
+
+/* COLORS */
+.greenTxt { color: #3cff99; }
+.cyan { color: #4deeea; }
+.purple { color: #b983ff; }
+.gray { color: #7a7a7a; }
+.redTxt { color: #ff6b6b; }
+
+/* CURSOR */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #9ef7cf;
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* NOISE */
+.noise {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+</style>
+</head>
+
+<body>
+
+<div class="terminal">
+  <div class="header">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+  </div>
+
+  <div class="screen" id="screen"></div>
+  <div class="noise"></div>
+</div>
+
+<audio id="keySound" preload="auto">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-keyboard-typing-1386.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const lines = [
+  { t: "shayan@quantum-linux:~$ boot --secure", c: "greenTxt" },
+  { t: "Initializing kernel modules...", c: "gray", d: 400 },
+  { t: "Mounting /mind/logic ✔", c: "cyan" },
+  { t: "Mounting /mind/creativity ✔", c: "cyan" },
+  { t: "Loading neural cache ██████████ 100%", c: "greenTxt", d: 300 },
+  { t: "", c: "" },
+
+  { t: "User: Shayan", c: "purple" },
+  { t: "Role: Senior Software Engineer", c: "cyan" },
+  { t: "Stack: Python | Go | Dart | Flutter | FastAPI", c: "greenTxt" },
+  { t: "Focus: AI • Backend • Automation • Systems", c: "cyan" },
+  { t: "", c: "" },
+
+  { t: "Status: ONLINE", c: "greenTxt" },
+  { t: "Mindset: Build fast. Think deeper. Break limits.", c: "purple" },
+  { t: "", c: "" },
+
+  { t: "shayan@quantum-linux:~$ █", c: "greenTxt" }
+];
+
+const screen = document.getElementById("screen");
+const sound = document.getElementById("keySound");
+
+let line = 0, char = 0;
+
+function playSound() {
+  sound.currentTime = 0;
+  sound.play().catch(()=>{});
+}
+
+function type() {
+  if (line >= lines.length) return;
+  let l = lines[line];
+
+  if (char === 0) {
+    const span = document.createElement("span");
+    span.className = l.c;
+    screen.appendChild(span);
+    screen.appendChild(document.createElement("br"));
+  }
+
+  const span = screen.querySelectorAll("span")[line];
+  span.textContent += l.t[char] || "";
+  if (l.t[char] && l.t[char] !== " ") playSound();
+
+  char++;
+
+  if (char > l.t.length) {
+    char = 0;
+    line++;
+    setTimeout(type, l.d || 180);
+  } else {
+    setTimeout(type, 28 + Math.random()*30);
+  }
+}
+
+type();
+</script>
+
+</body>
+</html>
